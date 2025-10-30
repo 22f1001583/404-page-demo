@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>404 - Page Not Found</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>404 — Oops! We hit a dead end</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      min-height: 100vh;
-    }
-    h1 { 
-      font-size: 120px; 
-      color: #ffffff; 
-      margin: 0;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-    h2 {
-      font-size: 36px;
-      margin: 20px 0;
-    }
-    p {
-      font-size: 18px;
-      margin: 15px 0;
-    }
-    a {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: white;
-      color: #667eea;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
-      transition: transform 0.2s;
-    }
-    a:hover {
-      transform: scale(1.05);
-    }
+    body { font-family: system-ui, Arial, sans-serif; text-align: center; padding: 48px; color:#333; }
+    .card { display:inline-block; text-align:left; padding:28px; border-radius:12px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); max-width:680px; width:100%; }
+    h1 { font-size:86px; margin:0; color:#e74c3c; line-height:0.9; }
+    h2 { margin:8px 0 12px 0; font-size:22px; }
+    p { margin:8px 0; }
+    ul { margin:12px 0 16px 20px; }
+    a { color: #0366d6; text-decoration:none; }
+    .home { display:inline-block; margin-top:12px; padding:8px 14px; border-radius:8px; border:1px solid #ddd; text-decoration:none; }
+    .search { margin-top:12px; display:flex; gap:8px; }
+    input[type="search"] { padding:8px; border-radius:8px; border:1px solid #ccc; flex:1; }
+    button { padding:8px 12px; border-radius:8px; border:1px solid #ccc; background:#fff; }
+    footer { margin-top:14px; font-size:13px; color:#666; }
   </style>
 </head>
 <body>
-  <h1>404</h1>
-  <h2>Oops! Page not found</h2>
-  <p>The page you're looking for doesn't exist or has been moved.</p>
-  <p>Don't worry, even the best explorers get lost sometimes! 🧭</p>
-  <p>Contact: 22f1001583@ds.study.iitm.ac.in</p>
-  <a href="/404-page-demo/">← Go back home</a>
+  <div class="card" role="main" aria-labelledby="title">
+    <h1 id="title">404</h1>
+    <h2>Looks like this page wandered off the map.</h2>
+
+    <p>Don’t worry — here are a few things you can try:</p>
+    <ul>
+      <li>Check the URL for typos.</li>
+      <li>Go back to the home page and navigate from there.</li>
+      <li>Try searching for what you need (quick search below).</li>
+    </ul>
+
+    <form class="search" action="/" method="get" onsubmit="event.preventDefault(); window.location='/';">
+      <input type="search" name="q" placeholder="Search (takes you home in this demo)"/>
+      <button type="submit">Search</button>
+    </form>
+
+    <a class="home" href="/">← Go back home</a>
+
+    <footer>
+      <p>If you think this is an error, contact: <!--email_off-->22f1001583@ds.study.iitm.ac.in<!--/email_off--></p>
+    </footer>
+  </div>
 </body>
 </html>
+
